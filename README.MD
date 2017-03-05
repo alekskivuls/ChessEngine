@@ -5,5 +5,5 @@ Simple web interface to a chess engine and AI.
 Python3:
 ```
 sudo pip3 install cherrypy==3.2.6 --no-use-wheel
-sudo pip3 install ws4py
+sudo pip3 install ws4py python-chess
 ```
