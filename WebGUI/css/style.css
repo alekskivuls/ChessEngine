@@ -1,0 +1,30 @@
+
+html, body{
+	height: 100%;
+}
+
+.chessboard{
+	/*border-style: solid;*/
+}
+
+.square{
+	width: 75px;
+	height: 75px;
+	position: relative;
+	float: left;
+	background: #b58863;
+}
+
+.square-white{
+	background: #f0d9b5;
+}
+
+.chess-piece{
+	width: 75px;
+	height: 75px;
+}
+
+.click-active{
+	background: green;
+    background-color: rgba(0,0,0,.5);
+}
