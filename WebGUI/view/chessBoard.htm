@@ -1,12 +1,14 @@
-
-<div id="chess-board" ng-controller="board_controller">
-	<div class="chessboard">
-		<div class="container board">
-			<div class="row" ng-repeat="row in board" style="width:100%;">
-				<div class="square" ng-class="{'square-white': (row.row % 2 == 0 && row.cols.indexOf(c) % 2 == 0) || (row.row % 2 != 0 && row.cols.indexOf(c) % 2 != 0), 'click-active': active_click == (c+row.row)}" ng-repeat="c in row.cols" ng-click="click(c+row.row)">
-					<img class="chess-piece" ng-show="get(c+row.row)" src="img/{{get(c+row.row)}}.png">
+<div ng-controller="board_controller">
+	
+	<div id="chess-board" >
+		<div class="chessboard">
+			<div class="container board">
+				<div class="row" ng-repeat="row in board" style="width:100%;">
+					<div class="square" ng-class="{'square-white': (row.row % 2 == 0 && row.cols.indexOf(c) % 2 == 0) || (row.row % 2 != 0 && row.cols.indexOf(c) % 2 != 0), 'click-active': active_click == (c+row.row)}" ng-repeat="c in row.cols" ng-click="click(c+row.row)">
+						<img class="chess-piece" ng-show="get(c+row.row)" src="img/{{get(c+row.row)}}.png">
+					</div>
 				</div>
-			</div>
-		</div>					
+			</div>					
+		</div>
 	</div>
 </div>
