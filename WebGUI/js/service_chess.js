@@ -30,7 +30,7 @@ chessApp.service('chessService', function(){
 	set("c8", "bB");
 	set("f8", "bB");
 	set("c1", "wB");
-	set("c8", "wB");
+	set("f1", "wB");
 
 	set("b8", "bN");
 	set("g8", "bN");
