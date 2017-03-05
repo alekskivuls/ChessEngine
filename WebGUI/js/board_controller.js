@@ -42,6 +42,7 @@ chessApp.controller('board_controller', function($scope, chessService){
 
 	/*** Clicking & Move ***/
 	$scope.active_click = null;
+	var turn = 1; // 1 = white, -1 = black
 	$scope.click = function(_loc){
 
 
@@ -49,9 +50,18 @@ chessApp.controller('board_controller', function($scope, chessService){
 			// Check if there is a piece there
 			var piece = chessService.getCoord(_loc);
 
+			var t = piece.charAt(0);
+
+
 			// Try to select a tile
 			if(piece != ""){
-				$scope.active_click = _loc;
+				if(t == 'w' && turn == 1){
+					$scope.active_click = _loc;
+				}
+
+				if(t == 'b' && turn == -1){
+					$scope.active_click = _loc;	
+				}
 			}
 		} else {
 
@@ -64,6 +74,8 @@ chessApp.controller('board_controller', function($scope, chessService){
 
 				// Clear previous tile
 				chessService.set($scope.active_click, "");
+
+				turn = turn * -1;
 			}
 			$scope.active_click = null;
 		}

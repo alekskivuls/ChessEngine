@@ -1,2 +1,2 @@
 
-var chessApp = angular.module("chessApp", []);
+var chessApp = angular.module("chessApp", ['ngWebSocket']);
