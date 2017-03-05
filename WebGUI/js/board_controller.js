@@ -1,38 +1,42 @@
-chessApp.controller('board_controller', function($scope){
-	$scope.test = "board"
+chessApp.controller('board_controller', function($scope, chessService){
 
 	$scope.board = [
 		{
-			row : 8,
-			cols : ['a','b','c','d','e','f','g','h']
-		},
-		{
-			row : 7,
-			cols : ['a','b','c','d','e','f','g','h']
-		},
-		{
-			row : 6,
-			cols : ['a','b','c','d','e','f','g','h']
-		},
-		{
-			row : 5,
-			cols : ['a','b','c','d','e','f','g','h']
-		},
-		{
-			row : 4,
-			cols : ['a','b','c','d','e','f','g','h']
-		},
-		{
-			row : 3,
-			cols : ['a','b','c','d','e','f','g','h']
+			row : 1,
+			cols : ['h','g', 'f', 'e', 'd', 'c','b','a']
 		},
 		{
 			row : 2,
-			cols : ['a','b','c','d','e','f','g','h']
+			cols : ['h','g', 'f', 'e', 'd', 'c','b','a']
 		},
 		{
-			row : 1,
-			cols : ['a','b','c','d','e','f','g','h']
+			row : 3,
+			cols : ['h','g', 'f', 'e', 'd', 'c','b','a']
+		},
+		{
+			row : 4,
+			cols : ['h','g', 'f', 'e', 'd', 'c','b','a']
+		},
+		{
+			row : 5,
+			cols : ['h','g', 'f', 'e', 'd', 'c','b','a']
+		},
+		{
+			row : 6,
+			cols : ['h','g', 'f', 'e', 'd', 'c','b','a']
+		},
+		{
+			row : 7,
+			cols : ['h','g', 'f', 'e', 'd', 'c','b','a']
+		},
+		{
+			row : 8,
+			cols : ['h','g', 'f', 'e', 'd', 'c','b','a']
 		}
 	]
+
+	$scope.get = function(_loc){
+		console.log(_loc);
+		return chessService.getCoord(_loc);
+	}
 });

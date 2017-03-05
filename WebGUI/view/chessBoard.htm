@@ -1,10 +1,10 @@
-Chess Board
+
 <div id="chess-board" ng-controller="board_controller">
 	<div class="chessboard">
 		<div class="container board">
 			<div class="row" ng-repeat="row in board" style="width:100%;">
 				<div class="square" ng-class="{'square-white': (row.row % 2 == 0 && row.cols.indexOf(c) % 2 == 0) || (row.row % 2 != 0 && row.cols.indexOf(c) % 2 != 0)}" ng-repeat="c in row.cols">
-					{{c}}{{row.row}}
+					<img class="chess-piece" ng-show="get(c+row.row)" src="img/{{get(c+row.row)}}.png">
 				</div>
 			</div>
 		</div>

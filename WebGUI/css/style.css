@@ -18,3 +18,8 @@ html, body{
 .square-white{
 	background: #f0d9b5;
 }
+
+.chess-piece{
+	width: 75px;
+	height: 75px;
+}
