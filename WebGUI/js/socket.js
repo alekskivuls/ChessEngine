@@ -1,6 +1,6 @@
 chessApp.service("socket", function($websocket){
 
-	var socket = $websocket();
+	var socket = $websocket("ws://cirrus.alekskivuls.com");
 
 	socket.onMessage(function(_message){
 		console.log(_message);
@@ -13,6 +13,7 @@ chessApp.service("socket", function($websocket){
 	}
 
 
+	send({test: 'hello world'});
 	var service = {
 		send 	: send
 	}
