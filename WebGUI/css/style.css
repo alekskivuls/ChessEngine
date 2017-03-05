@@ -23,3 +23,8 @@ html, body{
 	width: 75px;
 	height: 75px;
 }
+
+.click-active{
+	background: green;
+    background-color: rgba(0,0,0,.5);
+}
